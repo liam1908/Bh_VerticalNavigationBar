@@ -1,0 +1,239 @@
+﻿<div id="Desktop" data-tchmi-type="TcHmi.Controls.System.TcHmiView" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width-mode="Content" data-tchmi-min-width-unit="%" data-tchmi-height-mode="Content" data-tchmi-min-height-unit="%" data-tchmi-width="100" data-tchmi-height="1000" data-tchmi-width-unit="%" data-tchmi-height-unit="px" data-tchmi-min-width="100" data-tchmi-min-height="100">
+  <div id="VerticalNavBar" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="159" data-tchmi-top-unit="px" data-tchmi-width="335" data-tchmi-width-unit="px" data-tchmi-height="631" data-tchmi-zindex="2">
+      <link rel="stylesheet" href="VNavBar/style.css" />
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+      <!--Button thu phóng menu-->
+      <div class="btn">
+          <span class="fas fa-bars"></span>
+      </div>
+      <div class="nav-bar-text">Side Menu</div>
+      <nav class="sidebar">
+          <div class="side-menu-container">
+              <ul>
+                  <li><a href="#">Menu 1</a></li>
+                  <li>
+                      <a href="#" class="menu-2-btn">
+                          Menu 2
+                          <!--Arrow hiển thị bên cạnh tên menu-->
+                          <span class="fas fa-caret-down first"></span>
+                      </a>
+                      <ul class="menu-2-show">
+                          <li><a href="#" class="menu-2-page-1">Page 1</a></li>
+                          <li><a href="#" class="menu-2-page-2">Page 2</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#" class="menu-3-btn">
+                          Menu 3
+                          <!--Arrow hiển thị bên cạnh tên menu-->
+                          <span class="fas fa-caret-down second"></span>
+                      </a>
+                      <ul class="menu-3-show">
+                          <li><a href="#" class="menu-3-page-1">Page 1</a></li>
+                          <li><a href="#" class="menu-3-page-2">Page 2</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">Menu 4</a></li>
+                  <li><a href="#">Menu 5</a></li>
+                  <li><a href="#">Menu 6</a></li>
+                  <li><a href="#">Menu 7</a></li>
+                  <li><a href="#">Menu 8</a></li>
+                  <li><a href="#">Menu 9</a></li>
+                  <li><a href="#">Menu 10</a></li>
+                  <li><a href="#">Menu 11</a></li>
+                  <li><a href="#">-----</a></li>
+              </ul>
+          </div>
+      </nav>
+      <script src="VNavBar/fontawesomeJS.js"></script>
+      <script>
+          $('.btn').click(function () {
+              $(this).toggleClass("click");
+              $('.sidebar').toggleClass("show");
+              $('.nav-bar-text').toggleClass("show");
+          });
+          $('.menu-2-btn').click(function () {
+              $('nav ul .menu-2-show').toggleClass("show");
+              $('nav ul .first').toggleClass("rotate");
+          });
+          $('.menu-3-btn').click(function () {
+              $('nav ul .menu-3-show').toggleClass("show");
+              $('nav ul .second').toggleClass("rotate");
+          });
+          $('nav ul li').click(function () {
+              $(this).addClass("active").siblings().removeClass("active");
+          });
+      </script>
+      <script>
+          $('.menu-2-page-1').click(function () {             
+              TcHmi.Symbol.write('BreadCrumb', TcHmi.SymbolType.Internal, "Home > Menu 2 > Page 1");
+              TcHmi.Symbol.write('MenuIndex', TcHmi.SymbolType.Internal, "Content/Pages/" + "SamplePage_0" + ".content");
+              
+          });
+          $('.menu-2-page-2').click(function () {
+              
+              TcHmi.Symbol.write('BreadCrumb', TcHmi.SymbolType.Internal, "Home > Menu 2 > Page 2");
+              TcHmi.Symbol.write('MenuIndex', TcHmi.SymbolType.Internal, "Content/Pages/" + "SamplePage_1" + ".content");
+          });
+          $('.menu-3-page-1').click(function () {
+              
+              TcHmi.Symbol.write('BreadCrumb', TcHmi.SymbolType.Internal, "Home > Menu 3 > Page 1");
+              TcHmi.Symbol.write('MenuIndex', TcHmi.SymbolType.Internal, "Content/Pages/" + "SamplePage_2" + ".content");
+          });
+          $('.menu-3-page-2').click(function () {
+             
+              TcHmi.Symbol.write('BreadCrumb', TcHmi.SymbolType.Internal, "Home > Menu 3 > Page 2");
+              TcHmi.Symbol.write('MenuIndex', TcHmi.SymbolType.Internal, "Content/Pages/" + "SamplePage_0" + ".content");
+              
+          });
+
+          /*Chương trình load page vào*/
+          //var callMenuPage = function (pagename, regionname) {
+          //    /* Các page content đặt trong thư mục Content/Pages
+          //     * Phải tạo thêm 1 Internal Symbol trước khi chạy chương trình
+          //     */
+          //    TcHmi.Symbol.write('MenuIndex', TcHmi.SymbolType.Internal, "Content/Pages/"+pagename+".content");
+          //    var myControl = TcHmi.Controls.get(regionname);
+          //    if (myControl) {
+          //        TcHmi.Binding.create('%i%MenuIndex%/i%', myControl.setTargetContent, myControl);
+          //    }
+          //};
+      </script>
+  </div>
+
+<div id="myRegionNavBar" data-tchmi-type="TcHmi.Controls.System.TcHmiRegion" data-tchmi-height="631" data-tchmi-height-unit="px" data-tchmi-left="345" data-tchmi-left-unit="px" data-tchmi-top="159" data-tchmi-top-unit="px" data-tchmi-width="90" data-tchmi-width-unit="%" data-tchmi-target-content="%i%MenuIndex%/i%">
+
+</div>
+
+<div id="BreadCrumb" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="31" data-tchmi-left-unit="px" data-tchmi-top="118" data-tchmi-top-unit="px" data-tchmi-width="379" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text="%i%BreadCrumb%/i%" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="20" data-tchmi-text-font-style="Normal" data-tchmi-text-font-weight="Bold">
+
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+{
+  "color": "rgba(7, 68, 104, 1)"
+}
+</script>
+</div>
+
+        <div id="TcHmiHeaderGrid" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid"  data-tchmi-height="90" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-creator-visibility="Visible">
+            <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+                [
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                }
+                ]
+            </script>
+
+            <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+                [
+                {
+                "height": 1,
+                "heightUnit": "factor",
+                "heightMode": "Value",
+                "maxHeightUnit": "px",
+                "minHeightUnit": "px"
+                }
+                ]
+            </script>
+
+            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "angle": 90.0,
+  "stopPoints": [
+    {
+      "color": "rgba(175, 0, 0, 1)",
+      "stop": "0%"
+    },
+    {
+      "color": "rgba(163, 0, 0, 1)",
+      "stop": "10%"
+    },
+    {
+      "color": "rgba(239, 0, 0, 1)",
+      "stop": "40%"
+    },
+    {
+      "color": "rgba(163, 0, 0, 1)",
+      "stop": "100%"
+    }
+  ]
+}
+</script>
+
+        <div id="TcHmi_Controls_Beckhoff_TcHmiImage" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height="44" data-tchmi-height-unit="px" data-tchmi-left="31" data-tchmi-left-unit="px" data-tchmi-src="Images/Beckhoff_white.png" data-tchmi-top="25" data-tchmi-top-unit="px" data-tchmi-width="226" data-tchmi-width-unit="px">
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmi_Controls_Beckhoff_TcHmiImage.onPressed",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%myRegionNavBar::TargetContent%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/ContentPath",
+          "value": "Content/StartPage.content"
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%BreadCrumb::Text%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/String",
+          "value": "Home"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+
+</div>
+
+</div>
+
+</div>

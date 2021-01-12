@@ -1,0 +1,12 @@
+{
+    "CERTIFICATEEXPIRATION": "P14000D",
+    "REQUIREAUTH": 2,
+    "VIRTUALDIRECTORIES": {
+        "/": "D:\\WORK SPACE\\Beckhoff Internship\\Navigation and Responsive\\Vertical Navigation\\VerticalNav_HuynhMinhKhoi_1.12\\VerticalNavVer2\\VerticalNavVer2",
+        "/Beckhoff.TwinCAT.HMI.Controls": "D:\\WORK SPACE\\Beckhoff Internship\\Navigation and Responsive\\Vertical Navigation\\VerticalNav_HuynhMinhKhoi_1.12\\VerticalNavVer2\\Packages\\Beckhoff.TwinCAT.HMI.Controls.12.742.0\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.Functions": "D:\\WORK SPACE\\Beckhoff Internship\\Navigation and Responsive\\Vertical Navigation\\VerticalNav_HuynhMinhKhoi_1.12\\VerticalNavVer2\\Packages\\Beckhoff.TwinCAT.HMI.Functions.12.742.0\\runtimes\\native1.12-tchmi",
+        "/bin": "D:\\WORK SPACE\\Beckhoff Internship\\Navigation and Responsive\\Vertical Navigation\\VerticalNav_HuynhMinhKhoi_1.12\\VerticalNavVer2\\VerticalNavVer2\\bin\\",
+        "/bin/framework": "D:\\WORK SPACE\\Beckhoff Internship\\Navigation and Responsive\\Vertical Navigation\\VerticalNav_HuynhMinhKhoi_1.12\\VerticalNavVer2\\VerticalNavVer2\\bin\\framework",
+        "/framework": "D:\\WORK SPACE\\Beckhoff Internship\\Navigation and Responsive\\Vertical Navigation\\VerticalNav_HuynhMinhKhoi_1.12\\VerticalNavVer2\\Packages\\Beckhoff.TwinCAT.HMI.Framework.12.742.0\\runtimes\\native1.12-tchmi"
+    }
+}

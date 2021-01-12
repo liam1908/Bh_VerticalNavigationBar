@@ -1,0 +1,141 @@
+﻿<div id="StartPage" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-left-unit="px" data-tchmi-top-unit="px">
+
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "None"
+}
+</script>
+<div id="TcHmi_Controls_Beckhoff_TcHmiImage_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height="600" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-src="Images/Background.png" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%">
+
+</div>
+
+<div id="TcHmi_Controls_Beckhoff_TcHmiImage_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height="65" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-src="Images/Beckhoff_Logo.svg" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="219" data-tchmi-width-unit="px">
+
+</div>
+
+<div id="PageTitle" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="24" data-tchmi-left-unit="px" data-tchmi-top="85" data-tchmi-top-unit="px" data-tchmi-width="379" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text="Start Page" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="20" data-tchmi-text-font-style="Normal" data-tchmi-text-font-weight="Bold">
+
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+{
+  "color": "rgba(7, 68, 104, 1)"
+}
+</script>
+</div>
+
+<div id="TcHmi_Controls_Beckhoff_TcHmiDatagrid" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiDatagrid" data-tchmi-height="124" data-tchmi-height-unit="px" data-tchmi-left="121" data-tchmi-left-unit="px"    data-tchmi-top="167" data-tchmi-top-unit="px" data-tchmi-width="374" data-tchmi-width-unit="px">
+<script data-tchmi-target-attribute="data-tchmi-src-column" type="application/json">
+[
+  {
+    "name": "Test1",
+    "label": "Column 1",
+    "control": "TextBlock",
+    "width": 70,
+    "widthUnit": "px",
+    "resize": true,
+    "minWidth": 100,
+    "minWidthUnit": "px",
+    "editable": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "cellBackground": null,
+    "textColor": null
+  },
+  {
+    "name": "Test2",
+    "label": "Column 2",
+    "control": "TextBlock",
+    "width": 70,
+    "widthUnit": "px",
+    "resize": true,
+    "minWidth": 70,
+    "minWidthUnit": "px",
+    "editable": false,
+    "sortable": true,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "cellBackground": null,
+    "textColor": null
+  },
+  {
+    "name": "Test3",
+    "label": "Column 3",
+    "control": "CheckBox",
+    "width": 70,
+    "widthUnit": "px",
+    "resize": true,
+    "minWidth": 70,
+    "minWidthUnit": "px",
+    "editable": true,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "cellBackground": null,
+    "textColor": null
+  },
+  {
+    "name": "Test4",
+    "label": "Column 4",
+    "control": "TextBox",
+    "width": 100,
+    "widthUnit": "px",
+    "resize": true,
+    "minWidth": 70,
+    "minWidthUnit": "px",
+    "editable": true,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "cellBackground": null,
+    "textColor": null
+  }
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-src-data" type="application/json">
+[
+  {
+    "Test1": "Example Data",
+    "Test2": 42,
+    "Test3": true,
+    "Test4": "Editable Data"
+  },
+  {
+    "Test1": "Example Data",
+    "Test2": 3.1415,
+    "Test3": false,
+    "Test4": "Editable Data"
+  }
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-cell-content-padding" type="application/json">
+{
+  "left": 3,
+  "leftUnit": "px",
+  "right": 3,
+  "rightUnit": "px",
+  "top": 0,
+  "topUnit": "px",
+  "bottom": 0,
+  "bottomUnit": "px"
+}
+</script>
+
+</div>
+
+</div>

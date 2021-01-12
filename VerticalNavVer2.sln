@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FE7A1B72-C5B7-4D7C-BB7D-76384D4DE8E1}") = "VerticalNavVer2", "VerticalNavVer2\VerticalNavVer2.hmiproj", "{62C949F5-569A-44F8-B848-6AE1DA062B8D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|TwinCAT HMI = Debug|TwinCAT HMI
+		Release|TwinCAT HMI = Release|TwinCAT HMI
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62C949F5-569A-44F8-B848-6AE1DA062B8D}.Debug|TwinCAT HMI.ActiveCfg = Debug|TwinCAT HMI
+		{62C949F5-569A-44F8-B848-6AE1DA062B8D}.Debug|TwinCAT HMI.Build.0 = Debug|TwinCAT HMI
+		{62C949F5-569A-44F8-B848-6AE1DA062B8D}.Release|TwinCAT HMI.ActiveCfg = Release|TwinCAT HMI
+		{62C949F5-569A-44F8-B848-6AE1DA062B8D}.Release|TwinCAT HMI.Build.0 = Release|TwinCAT HMI
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7CCB70B7-C876-4D3D-A4D2-86D76B850B66}
+	EndGlobalSection
+EndGlobal
